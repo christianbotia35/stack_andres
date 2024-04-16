@@ -2,7 +2,7 @@ apiVersion: v2
 name: argo
 version: v1
 description: Helm chart to deploy argo workflows
-dependencies:
+sources:
 - name: argo-workflows
   version: 0.41.1
   repository: https://argoproj.github.io/argo-helm
