@@ -12,6 +12,7 @@ rules:
   - list
   - update
   - create
+  - get
 ---
 apiVersion: v1
 kind: ServiceAccount
