@@ -6,24 +6,22 @@ metadata:
 spec:
   generators:
   - git:
-      repoURL: 
+      repoURL: https://github.com/afos2000/stack.git
       revision: HEAD
       directories:
-      - path: 'cluster-apps/**/dev'
-      - path: cluster-apps/argo/*
-        exclude: true
+      - path: 'applications/argo/*'
 
   template:
     metadata:
       name: '{{path[1]}}'
     spec:
-      project: cluster-apps
+      project: default
       syncPolicy:
         automated:
           prune: true
           selfHeal: true
       source:
-        repoURL: 
+        repoURL: https://github.com/afos2000/stack.git
         targetRevision: HEAD
         path: '{{path}}'
       destination:
