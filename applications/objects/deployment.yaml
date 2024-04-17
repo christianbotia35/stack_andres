@@ -7,7 +7,7 @@ rules:
 - apiGroups:
   - argoproj.io
   resources:
-  - workflows
+  - '*''
   verbs:
   - list
   - update
