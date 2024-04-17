@@ -1,0 +1,29 @@
+kind: Role
+metadata:
+  name: argo
+rules:
+- apiGroups:
+  - argoproj.io
+  resources:
+  - workflows
+  verbs:
+  - list
+  - update
+  - create
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: argo
+---
+kind: RoleBinding
+metadata:
+  name: argo
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: argo
+subjects:
+- kind: ServiceAccount
+  name: argo
+  namespace: argo
