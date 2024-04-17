@@ -3,9 +3,9 @@ name: argo
 version: v1
 description: Helm chart to deploy argo workflows
 dependencies:
-- name: "argo-workflows"
-  version: "0.41.1"
-  repository: "https://argoproj.github.io/argo-helm"
+  - name: "argo-workflows"
+    version: "0.41.1"
+    repository: "https://argoproj.github.io/argo-helm"
 maintainers: 
   - name: Andres Ortega
     email: afortegast@gmail.com
