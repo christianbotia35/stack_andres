@@ -9,7 +9,7 @@ spec:
       repoURL: https://github.com/afos2000/stack.git
       revision: HEAD
       directories:
-      - path: 'applications/argo/*'
+      - path: 'applications/*'
 
   template:
     metadata:
