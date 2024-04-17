@@ -1,0 +1,12 @@
+apiVersion: v2
+name: sealed-secrets
+version: v1
+description: Helm chart to deploy sealed-secrets
+dependencies:
+  - name: sealed-secrets
+    version: 2.0.2
+    repository: https://charts.bitnami.com/bitnami
+maintainers: 
+  - name: Andres Ortega
+    email: afortegast@gmail.com
+    url: https://www.linkedin.com/in/andres-ortega-97435535/
