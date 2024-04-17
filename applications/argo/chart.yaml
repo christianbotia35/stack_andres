@@ -1,5 +1,5 @@
 apiVersion: v2
-name: argo
+name: argo-workflows
 version: v1
 description: Helm chart to deploy argo workflows
 dependencies:
