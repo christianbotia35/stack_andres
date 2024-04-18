@@ -9,10 +9,14 @@ rules:
   resources:
   - '*'
   verbs:
-  - list
-  - update
   - create
   - get
+  - list
+  - watch
+  - update
+  - patch
+  - delete
+  - deletecollection
 ---
 apiVersion: v1
 kind: ServiceAccount
