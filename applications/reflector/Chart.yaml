@@ -1,0 +1,12 @@
+apiVersion: v2
+name: reflector
+version: v1
+description: Helm chart to deploy reflector
+dependencies:
+  - name: reflector
+    version: 7.1.262
+    repository: https://emberstack.github.io/helm-charts
+maintainers: 
+  - name: Andres Ortega
+    email: afortegast@gmail.com
+    url: https://www.linkedin.com/in/andres-ortega-97435535/
