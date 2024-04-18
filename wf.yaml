@@ -2,18 +2,12 @@ apiVersion: argoproj.io/v1alpha1
 kind: Workflow
 metadata:
   namespace: argo
-  generateName: hello-world-
-  labels:
-    workflows.argoproj.io/archive-strategy: "false"
-  annotations:
-    workflows.argoproj.io/description: |
-      This is a simple hello world example.
+  name: boston-training
 spec:
   serviceAccount: argo
-  entrypoint: whalesay
+  entrypoint: boston
   templates:
-  - name: whalesay
+  - name: boston
     container:
-      image: docker/whalesay:latest
-      command: [cowsay]
-      args: ["hello world"]
+      image: ortegatrom/boston-mlflow 
+      
