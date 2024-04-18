@@ -1,10 +1,10 @@
 apiVersion: v2
-name: mlflow-server
+name: postgresql
 version: v1
-description: Helm chart to deploy mlflow-server
+description: Helm chart to deploy postgresql
 dependencies:
-  - name: mlflow-server
-    version: 0.3.0
+  - name: postgresql-ha
+    version: 9.4.11
     repository: https://mlops-for-all.github.io/helm-charts/
 maintainers: 
   - name: Andres Ortega
