@@ -46,3 +46,15 @@ metadata:
   annotations:
     kubernetes.io/service-account.name: argo
 type: kubernetes.io/service-account-token
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv0001
+spec:
+  accessModes:
+    - ReadWriteOnce
+  capacity:
+    storage: 5Gi
+  hostPath:
+    path: /data/pv0001/
