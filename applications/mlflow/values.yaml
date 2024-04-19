@@ -1,6 +1,6 @@
 mlflow:
   s3:
-    endpointUrl: http://minio-1687864592.minio:9000
+    endpointUrl: http://mlflow-minio:9000
     accessKeyId: rootUser
     secretAccessKey: rootPassword
     bucket: mlflow
