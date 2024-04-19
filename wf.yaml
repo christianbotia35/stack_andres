@@ -6,6 +6,10 @@ spec:
   serviceAccount: argo
   entrypoint: diamond
   templates:
+  - name: boston-logs
+    container:
+      image: ortegatrom/boston
+      command: [ "python", "model_training.py" ]
   - name: echo
     inputs:
       parameters:
@@ -46,4 +50,8 @@ spec:
         template: echo-thrice
         arguments:
           parameters: [{name: message, value: D}]
+      - name: E
+        depends: "D"
+        template: boston-logs
+        
       
