@@ -6,9 +6,9 @@ dependencies:
   - name: argo-workflows
     version: 0.41.1
     repository: https://argoproj.github.io/argo-helm
-  - name: postgresql-ha
-    version: 9.4.11
-    repository: https://mlops-for-all.github.io/helm-charts/
+  - name: postgresql
+    version: 15.2.5
+    repository: "https://charts.bitnami.com/bitnami"
   - name: minio
     version: 12.8.0
     repository: "https://charts.bitnami.com/bitnami"
