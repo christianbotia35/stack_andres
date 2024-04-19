@@ -1,0 +1,82 @@
+minio:
+  extraEnvVars:
+    - name: MINIO_BROWSER_REDIRECT_URL
+      value: https://artis-dev.fronius.com/minio/
+    - name: MINIO_CONSOLE_SUBPATH
+      value: /minio
+    - name: MINIO_BROWSER
+      value: "on"
+  tls:
+    enabled: false
+
+  auth:
+    ## @param auth.rootUser MinIO&reg; root username
+    ##
+    rootUser: artis
+    ## @param auth.rootPassword Password for MinIO&reg; root user
+    ##
+    rootPassword: "artisRules"
+
+  defaultBuckets: "argo-storage, thanos-store"
+
+  provisioning:
+    enabled: true
+    buckets:
+      - name: argo-storage
+        lifecycle:
+          - id: retention
+            prefix: ret
+            disabled: false
+            expiry:
+              days: 7
+ 
+  service:
+    ## @param service.type MinIO&reg; service type
+    ##
+    type: LoadBalancer
+    loadBalancerIP: "10.2.36.64"
+
+  persistence:
+    mountPath: /data
+    size: 40Gi
+    accessModes:
+      - ReadWriteOnce
+    existingClaim: pvc-qumulo-minio
+  
+  image:
+    debug: true
+
+  volumePermissions:
+    enabled: false
+  
+  # extraDeploy:
+  # - apiVersion:  networking.k8s.io/v1
+  #   kind: Ingress
+  #   metadata:
+  #     name: minio-ingress
+  #     namespace: argo
+  #     annotations:
+  #       nginx.ingress.kubernetes.io/rewrite-target: /$2
+  #       # nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
+  #       nginx.ingress.kubernetes.io/ssl-passthrough: "true"
+  #       nginx.ingress.kubernetes.io/ssl-redirect: "true"
+  #   spec:
+  #     ingressClassName: nginx
+  #     rules:
+  #     - host: artis-staging.fronius.com
+  #       http:
+  #         paths:
+  #         - path: /
+  #           pathType: Prefix
+  #           backend:
+  #             service:
+  #               name: minio
+  #               port:
+  #                 number: 9001
+  #         - path: /
+  #           pathType: Prefix
+  #           backend:
+  #             service:
+  #               name: minio
+  #               port:
+  #                 number: 9000
