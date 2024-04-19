@@ -1,7 +1,7 @@
 argo-workflows:
 
   nameOverride: argo-workflows
-  # controller:
+  controller:
   #   replicas: 2
   #   metricsConfig:
   #     enabled: true
