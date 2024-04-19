@@ -25,7 +25,7 @@ with open(model_path, "wb") as f:
     pickle.dump(model, f)
 
 mlflow_url = "http://mlflow-server-service.mlflow:5000"
-mlflow_url = "http://localhost:5000"
+# mlflow_url = "http://localhost:5000"
 mlflow.set_tracking_uri(mlflow_url)
 mlflow.set_experiment('boston-model')
 
@@ -39,4 +39,4 @@ with mlflow.start_run():
     mlflow.log_metric("mean_squared_error", mse)
 
     # Log model as an artifact
-    mlflow.log_artifact(model_path, "model")
+    # mlflow.log_artifact(model_path, "model")
