@@ -1,5 +1,6 @@
 import mlflow
 import mlflow.sklearn
+import pickle
 from sklearn.datasets import load_boston
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
@@ -18,19 +19,24 @@ y_pred = model.predict(X_test)
 mse = mean_squared_error(y_test, y_pred)
 print(f"Mean Squared Error: {mse}")
 
+# Save the model as a pickle file
+model_path = "linear_regression_model.pkl"
+with open(model_path, "wb") as f:
+    pickle.dump(model, f)
+
 mlflow_url = "http://mlflow-server-service.mlflow:5000"
+mlflow_url = "http://localhost:5000"
 mlflow.set_tracking_uri(mlflow_url)
 mlflow.set_experiment('boston-model')
+
 # Log the model and parameters in MLflow
-# with mlflow.start_run():
+with mlflow.start_run():
     # Log parameters
-mlflow.log_param("test_size", 0.2)
-mlflow.log_param("random_state", 42)
+    mlflow.log_param("test_size", 0.2)
+    mlflow.log_param("random_state", 42)
 
-# Log metrics
-mlflow.log_metric("mean_squared_error", mse)
+    # Log metrics
+    mlflow.log_metric("mean_squared_error", mse)
 
-# Log model
-mlflow.sklearn.log_model(model, "linear_regression_model")
-mlflow.end_run()
-
+    # Log model as an artifact
+    mlflow.log_artifact(model_path, "model")

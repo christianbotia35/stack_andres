@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Workflow
 metadata:
   namespace: argo
-  name: boston-training
+  generateName: boston-training-
 spec:
   serviceAccount: argo
   entrypoint: boston
