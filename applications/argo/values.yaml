@@ -19,7 +19,7 @@ argo-workflows:
       archive: true
       archiveTTL: 7d
       postgresql:
-        host: postgres-postgresql
+        host: argo-postgresql
         port: 5432
         database: postgres
         tableName: argo_workflows
