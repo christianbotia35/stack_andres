@@ -63,10 +63,10 @@ argo-workflows:
     serviceLabels:
       app: "workflow-controller"
 
-  server:
-    replicas: 2
-    secure: true
-    baseHref: /argo/
+  # server:
+  #   replicas: 2
+  #   secure: true
+  #   baseHref: /argo/
 
     extraEnv:
       - name: SSO_DELEGATE_RBAC_TO_NAMESPACE
