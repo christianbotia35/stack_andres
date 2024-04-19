@@ -12,18 +12,6 @@ minio:
 
   defaultBuckets: "argo-storage"
 
-  # service:
-  #   ## @param service.type MinIO&reg; service type
-  #   ##
-  #   type: LoadBalancer
-  
-  persistence:
-    mountPath: /data
-    size: 40Gi
-    accessModes:
-      - ReadWriteOnce
-  
-  image:
-    debug: false
+
 
   
