@@ -1,7 +1,7 @@
 argo-workflows:
 
   nameOverride: argo-workflows
-  controller:
+  # controller:
   #   replicas: 2
   #   metricsConfig:
   #     enabled: true
@@ -9,27 +9,27 @@ argo-workflows:
   #     completed: 10
   #     failed: 10
   #     errored: 10
-    persistence:
-      connectionPool:
-        maxIdleConns: 100
-        maxOpenConns: 0
-      # save the entire workflow into etcd and DB
-      nodeStatusOffLoad: true
-      # enable archiving of old workflows
-      archive: true
-      archiveTTL: 7d
-      postgresql:
-        host: argo-postgresql
-        port: 5432
-        database: postgres
-        tableName: argo_workflows
-        # the database secrets must be in the same namespace of the controller
-        userNameSecret:
-          name: argo-postgres
-          key: username
-        passwordSecret:
-          name: argo-postgres
-          key: password
+    # persistence:
+    #   connectionPool:
+    #     maxIdleConns: 100
+    #     maxOpenConns: 0
+    #   # save the entire workflow into etcd and DB
+    #   nodeStatusOffLoad: true
+    #   # enable archiving of old workflows
+    #   archive: true
+    #   archiveTTL: 7d
+    #   postgresql:
+    #     host: argo-postgresql
+    #     port: 5432
+    #     database: postgres
+    #     tableName: argo_workflows
+    #     # the database secrets must be in the same namespace of the controller
+    #     userNameSecret:
+    #       name: argo-postgres
+    #       key: username
+    #     passwordSecret:
+    #       name: argo-postgres
+    #       key: password
     
     # workflowDefaults:
     #   spec:
