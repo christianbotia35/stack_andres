@@ -33,10 +33,10 @@ minio:
             expiry:
               days: 7
  
-  service:
-    ## @param service.type MinIO&reg; service type
-    ##
-    type: LoadBalancer
+  # service:
+  #   ## @param service.type MinIO&reg; service type
+  #   ##
+  #   type: LoadBalancer
   
   persistence:
     mountPath: /data
