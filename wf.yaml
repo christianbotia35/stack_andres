@@ -9,5 +9,5 @@ spec:
   templates:
   - name: boston
     container:
-      image: ortegatrom/boston-mlflow 
+      image: ortegatrom/iris-mlflow 
       

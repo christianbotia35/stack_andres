@@ -31,19 +31,19 @@ argo-workflows:
       #     name: argo-postgres
       #     key: password
     
-    workflowDefaults:
-      spec:
-        podMetadata:
-          labels:
-            logging: "artis"
-        activeDeadlineSeconds: 28800
-        podGC:
-          strategy: OnPodCompletion
-        serviceAccountName: argo
-        ttlStrategy:
-          secondsAfterCompletion: 10 # Time to live after workflow is completed, replaces ttlSecondsAfterFinished
-          secondsAfterSuccess: 5     # Time to live after workflow is successful
-          secondsAfterFailure: 5     # Time to live after workflow fails
+    # workflowDefaults:
+    #   spec:
+    #     podMetadata:
+    #       labels:
+    #         logging: "tt"
+    #     activeDeadlineSeconds: 28800
+    #     podGC:
+    #       strategy: OnPodCompletion
+    #     serviceAccountName: argo
+    #     ttlStrategy:
+    #       secondsAfterCompletion: 10 # Time to live after workflow is completed, replaces ttlSecondsAfterFinished
+    #       secondsAfterSuccess: 5     # Time to live after workflow is successful
+    #       secondsAfterFailure: 5     # Time to live after workflow fails
 
 
 
