@@ -182,4 +182,4 @@ argo-workflows:
       # insecure will disable TLS. Primarily used for minio installs not configured with TLS
       insecure: true
       bucket: argo-storage
-      endpoint: minio.argo.svc.cluster.local:9000
+      endpoint: minio.minio.svc.cluster.local:9000
