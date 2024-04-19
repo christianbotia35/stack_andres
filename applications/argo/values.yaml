@@ -18,18 +18,18 @@ argo-workflows:
       # enable archiving of old workflows
       archive: true
       archiveTTL: 7d
-      postgresql:
-        host: postgres-postgresql
-        port: 5432
-        database: postgres
-        tableName: argo_workflows
-        # the database secrets must be in the same namespace of the controller
-        userNameSecret:
-          name: argo-postgres
-          key: username
-        passwordSecret:
-          name: argo-postgres
-          key: password
+      # postgresql:
+      #   host: postgres-postgresql
+      #   port: 5432
+      #   database: postgres
+      #   tableName: argo_workflows
+      #   # the database secrets must be in the same namespace of the controller
+      #   userNameSecret:
+      #     name: argo-postgres
+      #     key: username
+      #   passwordSecret:
+      #     name: argo-postgres
+      #     key: password
     
     workflowDefaults:
       metadata:
