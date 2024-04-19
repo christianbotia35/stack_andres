@@ -47,21 +47,21 @@ argo-workflows:
 
 
 
-  useDefaultArtifactRepo:  true
+  # useDefaultArtifactRepo:  true
 
-  artifactRepository:
-    archiveLogs: true
-    s3:
-      accessKeySecret:
-        name: minio
-        key: root-user
-      secretKeySecret:
-        name: minio
-        key: root-password
-      # insecure will disable TLS. Primarily used for minio installs not configured with TLS
-      insecure: true
-      bucket: argo-storage
-      endpoint: minio.argo:9000
+  # artifactRepository:
+  #   archiveLogs: true
+  #   s3:
+  #     accessKeySecret:
+  #       name: minio
+  #       key: root-user
+  #     secretKeySecret:
+  #       name: minio
+  #       key: root-password
+  #     # insecure will disable TLS. Primarily used for minio installs not configured with TLS
+  #     insecure: true
+  #     bucket: argo-storage
+  #     endpoint: minio.argo:9000
 
 minio:
   tls:
