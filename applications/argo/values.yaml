@@ -68,22 +68,22 @@ argo-workflows:
   #   secure: true
   #   baseHref: /argo/
 
-    extraEnv:
-      - name: SSO_DELEGATE_RBAC_TO_NAMESPACE
-        value: "true"
+  #   extraEnv:
+  #     - name: SSO_DELEGATE_RBAC_TO_NAMESPACE
+  #       value: "true"
 
     
-    extraArgs:
-    - --auth-mode=client
-    - --auth-mode=sso
+  #   extraArgs:
+  #   - --auth-mode=client
+  #   - --auth-mode=sso
 
-    logging:
-      # -- Set the logging level (one of: `debug`, `info`, `warn`, `error`)
-      level: info
-      # -- Set the glog logging level
-      globallevel: "0"
-      # -- Set the logging format (one of: `text`, `json`)
-      format: "text"
+  #   logging:
+  #     # -- Set the logging level (one of: `debug`, `info`, `warn`, `error`)
+  #     level: info
+  #     # -- Set the glog logging level
+  #     globallevel: "0"
+  #     # -- Set the logging format (one of: `text`, `json`)
+  #     format: "text"
 
   extraObjects:
     # - apiVersion: v1
