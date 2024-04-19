@@ -13,9 +13,9 @@ argo-workflows:
       connectionPool:
         maxIdleConns: 100
         maxOpenConns: 0
-      save the entire workflow into etcd and DB
+      # save the entire workflow into etcd and DB
       nodeStatusOffLoad: true
-      enable archiving of old workflows
+      # enable archiving of old workflows
       archive: true
       archiveTTL: 7d
       postgresql:
@@ -66,7 +66,6 @@ argo-workflows:
 minio:
   tls:
     enabled: false
-
   auth:
     ## @param auth.rootUser MinIO&reg; root username
     ##
@@ -74,7 +73,6 @@ minio:
     ## @param auth.rootPassword Password for MinIO&reg; root user
     ##
     rootPassword: "andresRules"
-
   defaultBuckets: "argo-storage"
 
 postgresql:
