@@ -15,12 +15,12 @@ minio:
   auth:
     ## @param auth.rootUser MinIO&reg; root username
     ##
-    rootUser: artis
+    rootUser: andres
     ## @param auth.rootPassword Password for MinIO&reg; root user
     ##
-    rootPassword: "artisRules"
+    rootPassword: "andresRules"
 
-  defaultBuckets: "argo-storage, thanos-store"
+  defaultBuckets: "argo-storage"
 
   provisioning:
     enabled: true
@@ -43,11 +43,8 @@ minio:
     size: 40Gi
     accessModes:
       - ReadWriteOnce
-    existingClaim: pvc-qumulo-minio
   
   image:
     debug: false
 
-  # volumePermissions:
-  #   enabled: true
   
