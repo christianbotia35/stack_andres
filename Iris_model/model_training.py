@@ -19,7 +19,7 @@ accuracy = accuracy_score(y_test, y_pred)
 print(f"Accuracy: {accuracy}")
 
 mlflow_url = "http://mlflow-server-service.mlflow:5000"
-
+mlflow_url = "http://localhost:5000"
 mlflow.set_tracking_uri(mlflow_url)
 mlflow.set_experiment('iris-model')
 # Log the model and parameters in MLflow
