@@ -1,6 +1,6 @@
 mlflow-server:
   s3:
-    endpointUrl: http://mlflow-minio:9000
+    endpointUrl: http://mlflow-minio.mlflow:9000
     accessKeyId: root-user
     secretAccessKey: root-password
     bucket: mlflow
@@ -10,7 +10,7 @@ minio:
   auth:
     ## @param auth.rootUser MinIO&reg; root username
     ##
-    rootUser: andres
+    # rootUser: andres
     ## @param auth.rootPassword Password for MinIO&reg; root user
     ##
     rootPassword: "andresRules"
