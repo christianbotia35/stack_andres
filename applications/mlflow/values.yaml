@@ -1,4 +1,4 @@
-mlflow:
+mlflow-server:
   s3:
     endpointUrl: http://mlflow-minio:9000
     accessKeyId: rootUser

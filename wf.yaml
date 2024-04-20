@@ -6,9 +6,9 @@ spec:
   serviceAccount: argo
   entrypoint: diamond
   templates:
-  - name: boston-logs
+  - name: iris
     container:
-      image: ortegatrom/boston
+      image: ortegatrom/ligh-iris
       command: [ "python", "model_training.py" ]
   - name: echo
     inputs:
@@ -52,6 +52,6 @@ spec:
           parameters: [{name: message, value: D}]
       - name: E
         depends: "D"
-        template: boston-logs
+        template: iris
         
       

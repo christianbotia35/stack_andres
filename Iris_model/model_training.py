@@ -32,4 +32,4 @@ with mlflow.start_run():
     mlflow.log_metric("accuracy", accuracy)
 
     # Log model
-    # mlflow.sklearn.log_model(model, "logistic_regression_model")
+    mlflow.sklearn.log_model(model, "logistic_regression_model")
