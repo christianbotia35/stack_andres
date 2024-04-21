@@ -41,29 +41,3 @@ Reflector facilitates real-time synchronization of Kubernetes resources across m
 ![Reloader](images/reloader.png)
 
 Reloader automatically detects changes to Kubernetes resources and triggers the necessary updates, eliminating the need for manual intervention during deployments. By dynamically reloading configurations in response to changes, Reloader enhances the agility and efficiency of your GitOps pipelines, allowing you to deliver updates rapidly and reliably.
-
-## Relevant Deployments
-
-### Argocd
-
-Argocd enables automated continuous deployment by synchronizing Kubernetes applications with Git repositories, ensuring consistent and reliable deployments across environments.
-
-### Argo Workflows
-
-Argo Workflows orchestrates complex CI/CD pipelines, enabling you to automate the execution of tasks, jobs, and processes within Kubernetes clusters.
-
-### Seal-secrets
-
-Seal-secrets provides a secure mechanism for managing sensitive information within Kubernetes clusters, encrypting secrets at rest and decrypting them on-demand during runtime.
-
-### MLFLOW Server
-
-MLFLOW Server serves as a centralized hub for tracking and managing machine learning experiments, models, and artifacts, facilitating collaboration and reproducibility in ML workflows.
-
-### Reflector
-
-Reflector enables real-time synchronization of Kubernetes resources across multiple clusters, ensuring consistency and resilience in distributed application deployments.
-
-### Reloader
-
-Reloader automates the reloading of Kubernetes resources in response to configuration changes, streamlining the deployment process and enhancing operational efficiency.
