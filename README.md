@@ -14,7 +14,7 @@ Argocd simplifies and automates your continuous deployment process by leveraging
 
 ### Workflows: Argo Workflows
 
-![Argo Workflows](images/argo-workflows.gif)
+![Argo Workflows](images/argo-workflows.png)
 
 Argo Workflows orchestrates complex workflows in Kubernetes, enabling you to automate and streamline your CI/CD pipelines. With support for parallelism, branching, and custom logic, Argo Workflows empowers you to build resilient and scalable automation solutions tailored to your specific requirements.
 
@@ -26,19 +26,19 @@ Seal-secrets provides a secure and GitOps-friendly approach to managing sensitiv
 
 ### ML Storage: MLFLOW Server
 
-![MLFLOW Server](images/mlflow-server.gif)
+![MLFLOW Server](images/mlflow.png)
 
 MLFLOW Server serves as a centralized repository for managing and tracking machine learning experiments, models, and artifacts. With MLFLOW Server integrated into your GitOps workflow, you can seamlessly version control your machine learning projects and collaborate effectively across teams.
 
 ### Sharing: Reflector
 
-![Reflector](images/reflector.png)
+![Reflector]
 
 Reflector facilitates real-time synchronization of Kubernetes resources across multiple clusters, enabling you to share and replicate application configurations effortlessly. Whether you're deploying applications across hybrid-cloud environments or implementing disaster recovery strategies, Reflector ensures consistency and resilience across your Kubernetes infrastructure.
 
 ### Autodeployment: Reloader
 
-![Reloader](images/reloader.gif)
+![Reloader](images/reloader.png)
 
 Reloader automatically detects changes to Kubernetes resources and triggers the necessary updates, eliminating the need for manual intervention during deployments. By dynamically reloading configurations in response to changes, Reloader enhances the agility and efficiency of your GitOps pipelines, allowing you to deliver updates rapidly and reliably.
 
