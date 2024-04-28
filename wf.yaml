@@ -2,6 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Workflow
 metadata:
   generateName: dag-diamond-steps-
+  namespace: argo
 spec:
   serviceAccount: argo
   entrypoint: diamond
@@ -10,6 +11,7 @@ spec:
     container:
       image: ortegatrom/model-iris:v1
       command: [ "python", "model_training.py" ]
+      imagePullPolicy: Always
   - name: echo
     inputs:
       parameters:
