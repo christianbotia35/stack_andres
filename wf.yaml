@@ -8,7 +8,7 @@ spec:
   templates:
   - name: iris
     container:
-      image: ortegatrom/ligh-iris
+      image: ortegatrom/model-iris:v1
       command: [ "python", "model_training.py" ]
   - name: echo
     inputs:
