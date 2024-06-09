@@ -1,18 +1,18 @@
 apiVersion: v2
 name: argo-workflows
 version: v1
-description: Helm chart to deploy argo workflows
+description: H Siktir
 dependencies:
   - name: argo-workflows
-    version: 0.41.1
+    version: 0.41.7
     repository: https://argoproj.github.io/argo-helm
-  - name: postgresql
-    version: 15.2.5
-    repository: "https://charts.bitnami.com/bitnami"
-  - name: minio
-    version: 12.8.0
-    repository: "https://charts.bitnami.com/bitnami"
+  # - name: postgresql
+  #   version: 15.2.5
+  #   repository: "https://charts.bitnami.com/bitnami"
+  # - name: minio
+  #   version: 12.8.0
+  #   repository: "https://charts.bitnami.com/bitnami"
 maintainers: 
-  - name: Andres Ortega
-    email: afortegast@gmail.com
-    url: https://www.linkedin.com/in/andres-ortega-97435535/
+  - name: Christian Botia
+    email: christian.botia7@gmail.com
+    url: https://www.linkedin.com/in/christian-botia/
